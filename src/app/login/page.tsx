@@ -18,19 +18,20 @@ type TForm = {
 const AboutPage: FC = () => {
     const [open, setOpen] = useState(false);
     const {register, handleSubmit, formState: {errors}, control, watch} = useForm<TForm>()
-
     const [openModal, setOpenModal] = useState(0)
     const genderWatch: number = watch("gender")
+
     const handleSubmitForm = () => {
         setOpen(false)
-
-
         setOpenModal(genderWatch)
     }
 
 
     return (
         <div>
+            <div>
+                <Input placeholder={"text"}/>
+            </div>
             <BottomSheet
                 onClose={() => setOpen(false)}
                 isOpen={open}
@@ -126,7 +127,7 @@ const AboutPage: FC = () => {
 
                 <video className={"bg-cover object-cover !h-[calc(100%-42px)] !size-full"} autoPlay playsInline
                        controls={false} preload="none">
-                    <source src={ "/assets/videos/mosa.mp4"} type="video/mp4"/>
+                    <source src={"/assets/videos/mosa.mp4"} type="video/mp4"/>
                 </video>
 
 
