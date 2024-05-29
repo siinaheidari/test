@@ -5,6 +5,7 @@ import {Controller, useForm} from "react-hook-form";
 import {Button, Input, Modal, Radio} from "antd";
 import {UserOutlined} from "@ant-design/icons";
 import musicLottie from "../../../public/assets/lottie/music.json"
+import downLottie from "../../../public/assets/lottie/down.json"
 import Lottie from "lottie-react";
 import {ReactTyped} from "react-typed";
 
@@ -29,11 +30,14 @@ const AboutPage: FC = () => {
 
     return (
         <div>
+            <div className={"mt-[9rem]"}>
+                {!open && <Lottie animationData={downLottie}/>}
+            </div>
             <BottomSheet
                 onClose={() => setOpen(false)}
                 isOpen={open}
-                className={"overflow-auto"}
-                snapPoints={[700, 400, 0]}
+                className={"[&>div]:!bg-white/99"}
+                snapPoints={[740, 400, 0]}
             >
                 <div className={"relative h-full"}>
                     <div className={"text-[30px] text-center font-bold text-[#303030]"}>
@@ -93,8 +97,8 @@ const AboutPage: FC = () => {
                                     rules={{required: "gender is required"}}
                                     render={({field, fieldState}) => (
                                         <Radio.Group {...field}>
-                                            <Radio value={1}>woman</Radio>
-                                            <Radio value={2}>men</Radio>
+                                            <Radio value={1}>female</Radio>
+                                            <Radio value={2}>male</Radio>
 
                                         </Radio.Group>
                                     )}
@@ -130,9 +134,10 @@ const AboutPage: FC = () => {
             </Modal>
 
 
-            <Modal  className={"!p-0"} destroyOnClose open={openModal === 2} footer={false} onCancel={() => setOpenModal(0)}>
+            <Modal className={"!p-0"} destroyOnClose open={openModal === 2} footer={false}
+                   onCancel={() => setOpenModal(0)}>
                 <video className={"bg-cover object-cover mx-auto !h-[500px]"} autoPlay playsInline
-                       controls={false} >
+                       controls={false}>
                     <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/parsafar.mp4"
                             type="video/mp4"/>
                 </video>
