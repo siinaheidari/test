@@ -87,7 +87,6 @@ const AboutPage: FC = () => {
                                 {errors.password && (<p className='error-message'>{errors.password.message}</p>)}
                             </div>
                         </div>
-
                         <div>
                             <label>gender :</label>
                             <div>
