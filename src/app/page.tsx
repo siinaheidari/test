@@ -10,7 +10,7 @@ const HomePage: FC = () => {
     useEffect(() => {
         setTimeout(() => {
             router.push("/login")
-        }, 5000)
+        }, 5300)
     }, [])
 
 
@@ -24,7 +24,7 @@ const HomePage: FC = () => {
                 </div>
             </div>*/}
             <div>
-                <video className={"bg-cover object-cover !h-screen !size-full"} autoPlay muted playsInline loop
+                <video className={"bg-cover object-cover !h-screen !size-full"}  autoPlay muted playsInline loop
                        controls={false} preload="none">
                     <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/introBull.mp4" type="video/mp4"/>
                 </video>
