@@ -127,7 +127,7 @@ const AboutPage: FC = () => {
 
                 <video className={"bg-cover object-cover !h-[calc(100%-42px)] !size-full"} autoPlay playsInline
                        controls={false} preload="none">
-                    <source src={"/assets/videos/mosa.mp4"} type="video/mp4"/>
+                    <source src={"../../../public/assets/videos/mosa.mp4"} type="video/mp4"/>
                 </video>
 
 
@@ -139,7 +139,7 @@ const AboutPage: FC = () => {
 
                 <video className={"bg-cover object-cover !h-[calc(100%-42px)] !size-full"} autoPlay playsInline
                        controls={false} preload="none">
-                    <source src="/assets/videos/parsafar.mp4" type="video/mp4"/>
+                    <source src="../../../public/assets/videos/parsafar.mp4" type="video/mp4"/>
                 </video>
 
             </Modal>
