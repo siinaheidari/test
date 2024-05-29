@@ -122,7 +122,7 @@ const AboutPage: FC = () => {
             <Modal destroyOnClose open={openModal === 1} footer={false} onCancel={() => setOpenModal(0)}>
 
                 <video className={" !h-[500px] !size-full"} autoPlay playsInline
-                       controls={false} preload="none">
+                       controls={false}>
                     <source src={"https://github.com/siinaheidari/test/raw/main/public/assets/videos/mosa.mp4"}
                             type="video/mp4"/>
                 </video>
@@ -132,7 +132,7 @@ const AboutPage: FC = () => {
 
             <Modal  className={"!p-0"} destroyOnClose open={openModal === 2} footer={false} onCancel={() => setOpenModal(0)}>
                 <video className={"bg-cover object-cover mx-auto !h-[500px]"} autoPlay playsInline
-                       controls={false} preload="none">
+                       controls={false} >
                     <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/parsafar.mp4"
                             type="video/mp4"/>
                 </video>

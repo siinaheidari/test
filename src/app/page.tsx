@@ -25,7 +25,7 @@ const HomePage: FC = () => {
             </div>*/}
             <div>
                 <video className={"bg-cover object-cover !h-screen !size-full"}  autoPlay muted playsInline loop
-                       controls={false} preload="none">
+                       controls={false}>
                     <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/introBull.mp4" type="video/mp4"/>
                 </video>
             </div>
