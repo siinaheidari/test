@@ -29,9 +29,6 @@ const AboutPage: FC = () => {
 
     return (
         <div>
-            <div>
-                <Input placeholder={"text"}/>
-            </div>
             <BottomSheet
                 onClose={() => setOpen(false)}
                 isOpen={open}
@@ -123,23 +120,21 @@ const AboutPage: FC = () => {
 
 
             <Modal destroyOnClose open={openModal === 1} footer={false} onCancel={() => setOpenModal(0)}>
-
-
                 <video className={"bg-cover object-cover !h-[calc(100%-42px)] !size-full"} autoPlay playsInline
                        controls={false} preload="none">
-                    <source src={"../../../public/assets/videos/mosa.mp4"} type="video/mp4"/>
+                    <source
+                        src={"https://gemootest.s3.us-east-2.amazonaws.com/s/res/654388055862730752/97e2d5c14db2dc975ef57793fb74b079.mp4?response-content-disposition=attachment%3B%20filename%3Dmosa.mp4&response-expires=Wed%2C%2029%20May%202024%2010%3A37%3A36%20GMT&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARLZICB6QQHKRCV7K%2F20240529%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20240529T103236Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=640011f11f369bacbe225e3014fc4dfb2d9393a065291b912cac7c7d1e889d9d"}
+                        type="video/mp4"/>
                 </video>
-
-
             </Modal>
 
 
             <Modal destroyOnClose open={openModal === 2} footer={false} onCancel={() => setOpenModal(0)}>
-
-
                 <video className={"bg-cover object-cover !h-[calc(100%-42px)] !size-full"} autoPlay playsInline
                        controls={false} preload="none">
-                    <source src="../../../public/assets/videos/parsafar.mp4" type="video/mp4"/>
+                    <source
+                        src="https://gemootest.s3.us-east-2.amazonaws.com/s/res/654388055862730752/d1056a0349b638c8254332f2068b9d7d.mp4?response-content-disposition=attachment%3B%20filename%3Dparsafar.mp4&response-expires=Wed%2C%2029%20May%202024%2010%3A38%3A15%20GMT&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARLZICB6QQHKRCV7K%2F20240529%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20240529T103315Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=779eaf978c57f7a2926fb38b0b56b7639cbf2b1552aca6e3b16c38f3a4018d30"
+                        type="video/mp4"/>
                 </video>
 
             </Modal>

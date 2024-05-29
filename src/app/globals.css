@@ -31,3 +31,7 @@ label {
 .typed-cursor--blink{
     display: none !important;
 }
+
+input{
+    font-size: 16px!important;
+}
