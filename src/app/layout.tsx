@@ -33,10 +33,6 @@ export default function RootLayout({children,}: Readonly<{
         </head>
         <body className={poppins.className + " !min-h-[calc(100dvh)]"}>
 
-        <video preload={"auto"} className={"bg-cover object-cover !h-screen !size-full hidden"}  autoPlay muted playsInline loop
-               controls={false}>
-            <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/introBull.mp4" type="video/mp4"/>
-        </video>
 
         <Providers>
             <Layout className={'!min-h-[calc(100dvh)] text-white'}>

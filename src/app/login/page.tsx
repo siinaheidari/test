@@ -38,13 +38,13 @@ const AboutPage: FC = () => {
             <video preload={"auto"} className={"bg-cover object-cover !h-screen !size-full hidden"} autoPlay muted
                    playsInline loop
                    controls={false}>
-                <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/mosa.mp4"
+                <source src="https://biaupload.com/static/files-2024-05/org-8cee627bfeee2.mp4"
                         type="video/mp4"/>
             </video>
             <video preload={"auto"} className={"bg-cover object-cover !h-screen !size-full hidden"} autoPlay muted
                    playsInline loop
                    controls={false}>
-                <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/parsafar.mp4"
+                <source src="https://biaupload.com/static/files-2024-05/org-d318afe942651.mp4"
                         type="video/mp4"/>
             </video>
 
@@ -138,9 +138,9 @@ const AboutPage: FC = () => {
             </div>
 
             <Modal destroyOnClose open={openModal === 1} footer={false} onCancel={() => setOpenModal(0)}>
-                <video className={" !h-[500px] !size-full"} autoPlay playsInline
+                <video preload={"auto"} className={" !h-[500px] !size-full"} autoPlay playsInline
                        controls={false}>
-                    <source src={"https://github.com/siinaheidari/test/raw/main/public/assets/videos/mosa.mp4"}
+                    <source src={"https://biaupload.com/static/files-2024-05/org-8cee627bfeee2.mp4"}
                             type="video/mp4"/>
                 </video>
             </Modal>
@@ -148,9 +148,9 @@ const AboutPage: FC = () => {
 
             <Modal className={"!p-0"} destroyOnClose open={openModal === 2} footer={false}
                    onCancel={() => setOpenModal(0)}>
-                <video className={"bg-cover object-cover mx-auto !h-[500px]"} autoPlay playsInline
+                <video preload={"auto"} className={"bg-cover object-cover mx-auto !h-[500px]"} autoPlay playsInline
                        controls={false}>
-                    <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/parsafar.mp4"
+                    <source src="https://biaupload.com/static/files-2024-05/org-d318afe942651.mp4"
                             type="video/mp4"/>
                 </video>
             </Modal>
