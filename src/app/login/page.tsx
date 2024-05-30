@@ -33,6 +33,18 @@ const AboutPage: FC = () => {
             <div className={"mt-[9rem]"}>
                 {!open && <Lottie animationData={downLottie}/>}
             </div>
+
+
+            <video preload={"auto"} className={"bg-cover object-cover !h-screen !size-full hidden"}  autoPlay muted playsInline loop
+                   controls={false}>
+                <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/mosa.mp4" type="video/mp4"/>
+            </video>
+            <video preload={"auto"} className={"bg-cover object-cover !h-screen !size-full hidden"}  autoPlay muted playsInline loop
+                   controls={false}>
+                <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/parsafar.mp4" type="video/mp4"/>
+            </video>
+
+
             <BottomSheet
                 onClose={() => setOpen(false)}
                 isOpen={open}
