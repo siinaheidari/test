@@ -31,17 +31,21 @@ const AboutPage: FC = () => {
     return (
         <div>
             <div className={"mt-[9rem]"}>
-                {!open && <Lottie animationData={downLottie}/>}
+                {!open && <Lottie animationData={downLottie} className={"max-w-[400px] mx-auto"}/> }
             </div>
 
 
-            <video preload={"auto"} className={"bg-cover object-cover !h-screen !size-full hidden"}  autoPlay muted playsInline loop
+            <video preload={"auto"} className={"bg-cover object-cover !h-screen !size-full hidden"} autoPlay muted
+                   playsInline loop
                    controls={false}>
-                <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/mosa.mp4" type="video/mp4"/>
+                <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/mosa.mp4"
+                        type="video/mp4"/>
             </video>
-            <video preload={"auto"} className={"bg-cover object-cover !h-screen !size-full hidden"}  autoPlay muted playsInline loop
+            <video preload={"auto"} className={"bg-cover object-cover !h-screen !size-full hidden"} autoPlay muted
+                   playsInline loop
                    controls={false}>
-                <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/parsafar.mp4" type="video/mp4"/>
+                <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/parsafar.mp4"
+                        type="video/mp4"/>
             </video>
 
 
@@ -133,15 +137,12 @@ const AboutPage: FC = () => {
                     login</Button>
             </div>
 
-
             <Modal destroyOnClose open={openModal === 1} footer={false} onCancel={() => setOpenModal(0)}>
-
                 <video className={" !h-[500px] !size-full"} autoPlay playsInline
                        controls={false}>
                     <source src={"https://github.com/siinaheidari/test/raw/main/public/assets/videos/mosa.mp4"}
                             type="video/mp4"/>
                 </video>
-
             </Modal>
 
 
@@ -152,7 +153,6 @@ const AboutPage: FC = () => {
                     <source src="https://github.com/siinaheidari/test/raw/main/public/assets/videos/parsafar.mp4"
                             type="video/mp4"/>
                 </video>
-
             </Modal>
 
         </div>
