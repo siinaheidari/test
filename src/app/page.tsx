@@ -11,24 +11,13 @@ const HomePage: FC = () => {
   const router = useRouter()
 
 
-  useEffect(() => {
-    if (!loading) {
-      setTimeout(() => {
-        router.push("/login")
-      }, 4600)
-    }
-  }, [loading])
-
-
-
-
   return (
     <div className='mx-auto center !min-h-screen'>
 
       <Spin spinning={loading}>
         <div>
           <ReactPlayer url='https://biaupload.com/static/files-2024-06/org-ba07c2005f481.mp4'
-                       className={" !bg-cover !object-cover !h-screen !size-full overflow-hidden"}
+                       className={" !bg-cover !object-cover !h-screen !size-full overflow-hidden !bg-black"}
                        playing={true}
                        controls={false}
                        playsinline={true}
@@ -37,7 +26,9 @@ const HomePage: FC = () => {
                        onReady={() => {
                          setLoading(false)
                        }}
-
+                       onEnded={() => {
+                         router.push("/login")
+                       }}
           />
         </div>
 
