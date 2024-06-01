@@ -15,7 +15,7 @@ const HomePage: FC = () => {
       setTimeout(() => {
         router.push("/login")
       }, 0)
-      // setLoading(true)
+      setLoading(true)
     }
   }, [loading])
 
