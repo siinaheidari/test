@@ -10,13 +10,14 @@ const HomePage: FC = () => {
   const router = useRouter()
 
 
-    useEffect(() => {
-      if (loading) {
-        setTimeout(() => {
-          router.push("/login")
-        }, 0)
-      }
-    }, [loading])
+  useEffect(() => {
+    if (!loading) {
+      setTimeout(() => {
+        router.push("/login")
+      }, 0)
+      // setLoading(true)
+    }
+  }, [loading])
 
 
   console.log(loading)
