@@ -1,6 +1,6 @@
 "use client"
 
-import {FC, useState} from "react";
+import {FC, useEffect, useState} from "react";
 import {useRouter} from "next/navigation";
 import {Spin} from "antd";
 
@@ -10,7 +10,12 @@ const HomePage: FC = () => {
   const router = useRouter()
 
 
-  console.log(loading)
+  useEffect(() => {
+    setTimeout(()=>{
+      router.push("/login")
+    },5500)
+  }, []);
+
 
   return (
     <div className='mx-auto center !min-h-screen'>
