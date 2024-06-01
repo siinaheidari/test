@@ -9,6 +9,7 @@ import downLottie from "../../../public/assets/lottie/down.json"
 import Lottie from "lottie-react";
 import {ReactTyped} from "react-typed";
 import useDetectKeyboardOpen from "use-detect-keyboard-open";
+import ReactPlayer from "react-player";
 
 type TForm = {
   name: string,
@@ -31,7 +32,6 @@ const AboutPage: FC = () => {
 
   const isKeyboardOpen = useDetectKeyboardOpen();
 
-  console.log(isKeyboardOpen)
 
   return (
     <div>
@@ -43,7 +43,7 @@ const AboutPage: FC = () => {
         onClose={() => setOpen(false)}
         isOpen={open}
         className={"[&>div]:!bg-white/99 [&>div]:overflow-auto"}
-        // snapPoints={[740, 400, 0]}
+        snapPoints={[740, 400, 0]}
       >
         <div className={"relative h-full"}>
           <div className={"text-[30px] text-center font-bold text-[#303030]"}>
@@ -133,26 +133,39 @@ const AboutPage: FC = () => {
       </div>
       <Modal destroyOnClose open={openModal === 1} footer={false} onCancel={() => setOpenModal(0)}>
         <Spin className={"mx-auto w-full"} spinning={loadingMosa}>
-          <video onCanPlayThrough={() => {
-            setLoadingMosa(false)
-          }} preload={"auto"} className={" !h-[500px] !size-full"} autoPlay playsInline
-                 controls={false}>
-            <source src={"https://biaupload.com/static/files-2024-05/org-8cee627bfeee2.mp4"}
-                    type="video/mp4"/>
-          </video>
+          <ReactPlayer url='https://biaupload.com/static/files-2024-05/org-8cee627bfeee2.mp4'
+                       className={"mosa"}
+                       playing={true}
+                       controls={false}
+                       playsinline={true}
+                       autoPlay={true}
+                       muted
+                       onReady={() => {
+                         setLoadingMosa(false)
+                       }}
+
+          />
+
         </Spin>
 
       </Modal>
       <Modal className={"!p-0"} destroyOnClose open={openModal === 2} footer={false}
              onCancel={() => setOpenModal(0)}>
         <Spin className={"mx-auto w-full"} spinning={loadingParsa}>
-          <video onCanPlayThrough={() => {
-            setLoadingParsa(false)
-          }} preload={"auto"} className={"bg-cover object-cover mx-auto !h-[500px] mx-auto"} autoPlay playsInline
-                 controls={false}>
-            <source src="https://biaupload.com/static/files-2024-05/org-d318afe942651.mp4"
-                    type="video/mp4"/>
-          </video>
+
+          <ReactPlayer url='https://biaupload.com/static/files-2024-05/org-d318afe942651.mp4'
+                       className={"parsafar"}
+                       playing={true}
+                       controls={false}
+                       playsinline={true}
+                       autoPlay={true}
+                       muted
+                       onReady={() => {
+                         setLoadingParsa(false)
+                       }}
+
+          />
+
         </Spin>
       </Modal>
     </div>
