@@ -50,11 +50,10 @@ const AboutPage: FC = () => {
             <ReactTyped strings={["Login"]} typeSpeed={80}/>
           </div>
 
-          {
-            !isKeyboardOpen&&    <div className={"text-[40px] text-center font-bold text-[#A6031A]"}>
-              <Lottie animationData={musicLottie} className={"size-[290px] mx-auto"}/>
+        <div className={"text-[40px] text-center font-bold text-[#A6031A]"}>
+              <Lottie animationData={musicLottie} className={`${isKeyboardOpen?"size-[100px]":"size-[290px]"}  mx-auto`}/>
             </div>
-          }
+
 
 
           <form onSubmit={handleSubmit(handleSubmitForm)} className={"space-y-1"} autoComplete="nope">
