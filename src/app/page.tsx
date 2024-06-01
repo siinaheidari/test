@@ -11,7 +11,7 @@ const HomePage: FC = () => {
 
 
     useEffect(() => {
-      if (!loading) {
+      if (loading) {
         setTimeout(() => {
           router.push("/login")
         }, 0)
@@ -25,7 +25,18 @@ const HomePage: FC = () => {
     <div className='mx-auto center !min-h-screen'>
 
       <Spin spinning={!loading}>
+        {/*    <ReactPlayer url='https://biaupload.com/static/files-2024-06/org-ba07c2005f481.mp4'
+                     className={"bg-cover object-cover !h-screen !size-full"}
 
+                     controls={true}
+                     playsinline={true}
+                     autoPlay={true}
+
+                     onReady={() => {
+                       setLoading(false)
+                     }}
+
+        />*/}
         <video
 
           onLoad={() => {
