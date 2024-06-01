@@ -23,18 +23,10 @@ const AboutPage: FC = () => {
   const genderWatch: number = watch("gender")
   const [loadingMosa, setLoadingMosa] = useState(true)
   const [loadingParsa, setLoadingParsa] = useState(true)
+
   const handleSubmitForm = () => {
     setOpen(false)
     setOpenModal(genderWatch)
-    if (genderWatch === 1) {
-      setTimeout(() => {
-        setLoadingMosa(false)
-      }, 1500)
-    } else if (genderWatch === 2) {
-      setTimeout(() => {
-        setLoadingParsa(false)
-      }, 1500)
-    }
   }
 
 
@@ -132,29 +124,28 @@ const AboutPage: FC = () => {
           login</Button>
       </div>
       <Modal destroyOnClose open={openModal === 1} footer={false} onCancel={() => setOpenModal(0)}>
-        {
-          loadingMosa ?
-            <Spin className={"mx-auto"} spinning={loadingMosa}>
-            </Spin>
-            : <video preload={"auto"} className={" !h-[500px] !size-full"} autoPlay playsInline
-                     controls={false}>
-              <source src={"https://biaupload.com/static/files-2024-05/org-8cee627bfeee2.mp4"}
-                      type="video/mp4"/>
-            </video>
-        }
+        <Spin className={"mx-auto w-full"} spinning={loadingMosa}>
+          <video onCanPlayThrough={() => {
+            setLoadingMosa(false)
+          }} preload={"auto"} className={" !h-[500px] !size-full"} autoPlay playsInline
+                 controls={false}>
+            <source src={"https://biaupload.com/static/files-2024-05/org-8cee627bfeee2.mp4"}
+                    type="video/mp4"/>
+          </video>
+        </Spin>
+
       </Modal>
       <Modal className={"!p-0"} destroyOnClose open={openModal === 2} footer={false}
              onCancel={() => setOpenModal(0)}>
-        {
-          loadingParsa ?
-            <Spin className={"mx-auto"} spinning={loadingParsa}>
-            </Spin> :
-            <video preload={"auto"} className={"bg-cover object-cover mx-auto !h-[500px] mx-auto"} autoPlay playsInline
-                   controls={false}>
-              <source src="https://biaupload.com/static/files-2024-05/org-d318afe942651.mp4"
-                      type="video/mp4"/>
-            </video>
-        }
+        <Spin className={"mx-auto w-full"} spinning={loadingParsa}>
+          <video onCanPlayThrough={() => {
+            setLoadingParsa(false)
+          }} preload={"auto"} className={"bg-cover object-cover mx-auto !h-[500px] mx-auto"} autoPlay playsInline
+                 controls={false}>
+            <source src="https://biaupload.com/static/files-2024-05/org-d318afe942651.mp4"
+                    type="video/mp4"/>
+          </video>
+        </Spin>
       </Modal>
     </div>
   );
