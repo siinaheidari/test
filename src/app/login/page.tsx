@@ -138,7 +138,7 @@ const AboutPage: FC = () => {
                        controls={false}
                        playsinline={true}
                        autoPlay={true}
-                       muted
+                       muted={false}
                        onReady={() => {
                          setLoadingMosa(false)
                        }}
@@ -158,7 +158,7 @@ const AboutPage: FC = () => {
                        controls={false}
                        playsinline={true}
                        autoPlay={true}
-                       muted
+                       muted={false}
                        onReady={() => {
                          setLoadingParsa(false)
                        }}
