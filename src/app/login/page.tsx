@@ -26,12 +26,15 @@ const AboutPage: FC = () => {
   const handleSubmitForm = () => {
     setOpen(false)
     setOpenModal(genderWatch)
-    setTimeout(() => {
-      setLoadingMosa(false)
-    }, 2000)
-    setTimeout(() => {
-      setLoadingParsa(false)
-    }, 2000)
+    if (genderWatch === 1) {
+      setTimeout(() => {
+        setLoadingMosa(false)
+      }, 1500)
+    } else if (genderWatch === 2) {
+      setTimeout(() => {
+        setLoadingParsa(false)
+      }, 1500)
+    }
   }
 
 
@@ -45,7 +48,7 @@ const AboutPage: FC = () => {
         onClose={() => setOpen(false)}
         isOpen={open}
         className={"[&>div]:!bg-white/99 [&>div]:overflow-auto"}
-        snapPoints={[740, 400, 0]}
+        // snapPoints={[740, 400, 0]}
       >
         <div className={"relative h-full"}>
           <div className={"text-[30px] text-center font-bold text-[#303030]"}>
@@ -128,13 +131,10 @@ const AboutPage: FC = () => {
         <Button onClick={() => setOpen(true)} block>
           login</Button>
       </div>
-
       <Modal destroyOnClose open={openModal === 1} footer={false} onCancel={() => setOpenModal(0)}>
-
         {
           loadingMosa ?
-            <Spin spinning={loadingMosa}>
-
+            <Spin className={"mx-auto"} spinning={loadingMosa}>
             </Spin>
             : <video preload={"auto"} className={" !h-[500px] !size-full"} autoPlay playsInline
                      controls={false}>
@@ -142,25 +142,20 @@ const AboutPage: FC = () => {
                       type="video/mp4"/>
             </video>
         }
-
       </Modal>
-
       <Modal className={"!p-0"} destroyOnClose open={openModal === 2} footer={false}
              onCancel={() => setOpenModal(0)}>
         {
-
           loadingParsa ?
-            <Spin spinning={loadingParsa}>
+            <Spin className={"mx-auto"} spinning={loadingParsa}>
             </Spin> :
-            <video preload={"auto"} className={"bg-cover object-cover mx-auto !h-[500px]"} autoPlay playsInline
+            <video preload={"auto"} className={"bg-cover object-cover mx-auto !h-[500px] mx-auto"} autoPlay playsInline
                    controls={false}>
               <source src="https://biaupload.com/static/files-2024-05/org-d318afe942651.mp4"
                       type="video/mp4"/>
             </video>
         }
-
       </Modal>
-
     </div>
   );
 };
