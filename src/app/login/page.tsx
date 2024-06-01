@@ -8,7 +8,7 @@ import musicLottie from "../../../public/assets/lottie/music.json"
 import downLottie from "../../../public/assets/lottie/down.json"
 import Lottie from "lottie-react";
 import {ReactTyped} from "react-typed";
-
+import useDetectKeyboardOpen from "use-detect-keyboard-open";
 
 type TForm = {
   name: string,
@@ -29,6 +29,9 @@ const AboutPage: FC = () => {
     setOpenModal(genderWatch)
   }
 
+  const isKeyboardOpen = useDetectKeyboardOpen();
+
+  console.log(isKeyboardOpen)
 
   return (
     <div>
@@ -46,9 +49,14 @@ const AboutPage: FC = () => {
           <div className={"text-[30px] text-center font-bold text-[#303030]"}>
             <ReactTyped strings={["Login"]} typeSpeed={80}/>
           </div>
-          <div className={"text-[40px] text-center font-bold text-[#A6031A]"}>
-            <Lottie animationData={musicLottie} className={"size-[290px] mx-auto"}/>
-          </div>
+
+          {
+            !isKeyboardOpen&&    <div className={"text-[40px] text-center font-bold text-[#A6031A]"}>
+              <Lottie animationData={musicLottie} className={"size-[290px] mx-auto"}/>
+            </div>
+          }
+
+
           <form onSubmit={handleSubmit(handleSubmitForm)} className={"space-y-1"} autoComplete="nope">
             <div>
               <label>name :</label>
