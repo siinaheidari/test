@@ -10,25 +10,28 @@ const HomePage: FC = () => {
   const router = useRouter()
 
 
-  useEffect(() => {
+ /* useEffect(() => {
     setTimeout(()=>{
       router.push("/login")
     },5500)
   }, []);
-
+*/
 
   return (
     <div className='mx-auto center !min-h-screen'>
-        <div>
+        <Spin spinning={loading}>
           <video
             onEnded={() => {
               router.push("/login")
             }}
+            onCanPlayThrough={() => {
+              setLoading(false)
+            }}
             preload={"auto"} className={"bg-cover object-cover !h-screen !size-full"} autoPlay muted playsInline
             controls={false}>
-            <source src="https://biaupload.com/static/files-2024-06/org-ba07c2005f481.mp4" type="video/mp4"/>
+            <source src="https://biaupload.com/static/files-2024-06/org-8f4432da12231.mp4" type="video/mp4"/>
           </video>
-        </div>
+        </Spin>
 
     </div>
   );

@@ -146,11 +146,9 @@ const AboutPage: FC = () => {
              onCancel={() => setOpenModal(0)}>
         <Spin className={"mx-auto w-full"} spinning={loadingParsa}>
 
-
-
           <video onCanPlayThrough={() => {
             setLoadingParsa(false)
-          }} preload={"auto"} className={"bg-cover object-cover mx-auto !h-[500px] mx-auto"} autoPlay playsInline
+          }} preload={"auto"} className={"bg-cover object-cover  !h-[500px] mx-auto"} autoPlay playsInline
                  controls={false}>
             <source src="https://biaupload.com/static/files-2024-05/org-d318afe942651.mp4"
                     type="video/mp4"/>
