@@ -40,7 +40,7 @@ const HomePage: FC = () => {
         />*/}
         <video
 
-          onLoad={() => {
+        /*  onLoad={() => {
             setLoading(false)
           }}
 
@@ -54,7 +54,7 @@ const HomePage: FC = () => {
 
           onLoadedData={() => {
             setLoading(false)
-          }}
+          }}*/
 
           onEnded={() => {
             setLoading(false)
