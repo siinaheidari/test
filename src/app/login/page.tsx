@@ -136,7 +136,7 @@ const AboutPage: FC = () => {
             setLoadingMosa(false)
           }} preload={"auto"} className={" !h-[500px] !size-full"} autoPlay playsInline
                  controls={false}>
-            <source src={"https://biaupload.com/static/files-2024-05/org-8cee627bfeee2.mp4"}
+            <source src={"https://biaupload.com/static/files-2024-08/org-e4db4ad2f94e2.mp4"}
                     type="video/mp4"/>
           </video>
         </Spin>
@@ -150,7 +150,7 @@ const AboutPage: FC = () => {
             setLoadingParsa(false)
           }} preload={"auto"} className={"bg-cover object-cover  !h-[500px] mx-auto"} autoPlay playsInline
                  controls={false}>
-            <source src="https://biaupload.com/static/files-2024-05/org-d318afe942651.mp4"
+            <source src="https://biaupload.com/static/files-2024-08/org-eaae8c8113ce1.mp4"
                     type="video/mp4"/>
           </video>
         </Spin>
